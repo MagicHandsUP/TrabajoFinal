@@ -808,7 +808,7 @@ INSERT INTO Producto_por_servicio VALUES (1, 23, 3);
 INSERT INTO Producto_por_servicio VALUES (1, 4, 4);
 INSERT INTO Producto_por_servicio VALUES (1, 24, 4);
 INSERT INTO Producto_por_servicio VALUES (1, 5, 5);
-INSERT INTO Producto_por_servicio VALUES (25, 5);
+INSERT INTO Producto_por_servicio VALUES (1, 25, 5);
 INSERT INTO Producto_por_servicio VALUES (1, 6, 6);
 INSERT INTO Producto_por_servicio VALUES (1, 26, 6);
 INSERT INTO Producto_por_servicio VALUES (1, 7, 7);
