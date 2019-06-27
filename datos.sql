@@ -1,6 +1,5 @@
-
 /* Datos de distritos */
-/* Distrito(ID_distrito, nombre, provincia, region, disponible) */
+/* Distrito(nombre, provincia, region, disponible) */
 INSERT INTO Distrito VALUES('Lima', 'Lima', 'Lima', 1);
 INSERT INTO Distrito VALUES('Ancón', 'Lima', 'Lima', 0);
 INSERT INTO Distrito VALUES('Ate', 'Lima', 'Lima', 1);
@@ -53,7 +52,7 @@ INSERT INTO Distrito VALUES('Ventanilla', 'Callao', 'Callao', 0);
 INSERT INTO Distrito VALUES('Mi Perú', 'Callao', 'Callao', 0);
 
 /* Ejemplos de datos de clientes */
-/* Cliente (ID_cliente, DNI_cliente, primer_nombre, primer_apellido, email, celular) */
+/* Cliente (DNI_cliente, primer_nombre, primer_apellido, email, celular) */
 INSERT INTO Cliente VALUES('70176253', 'Paolo', 'Bejarano', 'paolobejarano@mail.com', '983776344');
 INSERT INTO Cliente VALUES('70827364', 'Claudia', 'Padilla', 'claudiapadilla@mail.com', '987263827');
 INSERT INTO Cliente VALUES('7086733', 'Valeria', 'Orme','valeriaorme@mail.com', '927736543');
@@ -76,7 +75,7 @@ INSERT INTO Cliente VALUES('71893744', 'Rafael', 'Dellafredad', 'rafaeldellafred
 INSERT INTO Cliente VALUES('70784532', 'Alex', 'Guerrero', 'alexguerrero@mail.com', '999121765');
 
 /* Ejemplos de direcciones */
-/* Direccion(ID_direccion, direccion, referencias, id_distrito, id_cliente) */
+/* Direccion(direccion, referencias, id_distrito, id_cliente) */
 INSERT INTO Direccion VALUES('Av. Escardó 264 Dpto. 701', 'A 2 cuadras de Av. Costanera', 36, 1);
 INSERT INTO Direccion VALUES('Av. Victor Andres Belaunde 147, Via Real 133, Edificio Real Dos', 'Edifico de colores detras del Centro Comercial Camino Real', 31, 1);
 INSERT INTO Direccion VALUES('Av. Pezet 1310 Dpto. 301', 'Al frente del Golf Club', 31, 2);
@@ -111,7 +110,7 @@ INSERT INTO Direccion VALUES('Prado Ugarteche 550', 'A 1 cuadra de Av. La Molina
 INSERT INTO Direccion VALUES('Calle El Boulevard 141 Oficina 701', 'Edifico Blu Building en El Polo', 40, 20);
 
 /* Ejemplo de trabajdores */
-/* Trabajador(ID_trabajador, dni_trabajador, primer_nombre, primer_apellido, celular, contacto_de_emergencia) */
+/* Trabajador(dni_trabajador, primer_nombre, primer_apellido, celular, contacto_de_emergencia) */
 INSERT INTO Trabajador VALUES('29506272', 'Maritza', 'Soria', '988123864', 'Julissa Soria (Hermana) 932 837 433', 1);
 INSERT INTO Trabajador VALUES('20526343', 'Alejandra', 'Valera', '987265322', 'Lesly Valera(Prima hermana) 989 142 363', 1);
 INSERT INTO Trabajador VALUES('01987266', 'Emma', 'Rodriguez', '991675232', 'Luciano Rodriguez (Hermano) 987 125 531', 1);
@@ -124,7 +123,7 @@ INSERT INTO Trabajador VALUES('01947829', 'Alejandra', 'Ceballos', '989712353', 
 INSERT INTO Trabajador VALUES('70127376', 'Nancy', 'Ochoa', '999786423', 'Pamela Ochoa (Mamá) 989787973', 1);
 
 /* Ejemplo de proveedores */
-/* (ID_proveedor, RUC, razon_social, email, celular) */
+/* (RUC, razon_social, email, celular) */
 INSERT INTO Proveedor VALUES('11726354546', 'Distribuidora de productos de limpieza del Peru S.A.C.', 'ventas@productosdelimpieza.pe', '987262534');
 INSERT INTO Proveedor VALUES('15265353461', 'Distribuidora de químicos en lima E.I.R.L.', 'ventas@quimicoslima.pe', '997625353');
 INSERT INTO Proveedor VALUES('11298756991', 'Comercial de detergentes E.I.R.L.', 'contacto@detergentes.pe', '981123432');
@@ -137,7 +136,7 @@ INSERT INTO Proveedor VALUES('13712153341', 'Distribuidora Clean Twist S.A.C.', 
 INSERT INTO Proveedor VALUES('11347329871', 'Grupo Mercel E.I.R.L.', 'ventas@grupomercel.com', '978678721');
 
 /* Ejemplo de productos */
-/* Producto(ID_producto, nombre, presentacion) */
+/* Producto(nombre, presentacion) */
 INSERT INTO Producto VALUES ('Limpiador polvo y brillo', '300 ml');
 INSERT INTO Producto VALUES ('25 Bolsas de Basura Negras', 'unidad');
 INSERT INTO Producto VALUES ('Limpiador de tapicería Saca Manchas', 'Frasco 300ml');
@@ -190,7 +189,7 @@ INSERT INTO Producto VALUES ('Guantes medianos', 'Paquete 1 unidad');
 INSERT INTO Producto VALUES ('Aromatizador de ambientes', 'Aerosol 360ml');
 
 /* Ejemplo de proveedores por producto */
-/* Proveedor_por_producto(ID_proveedor_por_producto, ID_proveedor, ID_producto) */
+/* Proveedor_por_producto(ID_proveedor, ID_producto) */
 INSERT INTO Proveedor_por_producto VALUES(1, 1);
 INSERT INTO Proveedor_por_producto VALUES(1, 2);
 INSERT INTO Proveedor_por_producto VALUES(1, 3);
@@ -344,7 +343,7 @@ INSERT INTO Proveedor_por_producto VALUES(10, 28);
 
 
 /* Ejemplos de solicitudes */
-/* Solicitud(ID_solicitud, fecha_y_hora_de_solicitud, ID_cliente) */
+/* Solicitud(fecha_y_hora_de_solicitud, ID_cliente) */
 INSERT INTO Solicitud VALUES('2019-01-01 11:55:00.000', 1);
 INSERT INTO Solicitud VALUES('2019-01-03 11:45:10.000', 2);
 INSERT INTO Solicitud VALUES('2019-01-04 10:55:00.000', 3);
@@ -447,7 +446,7 @@ INSERT INTO Solicitud VALUES('2019-05-30 08:30:00.000', 18);
 INSERT INTO Solicitud VALUES('2019-05-30 11:15:00.000', 19);
 
 /* Ejemplos de servicios */
-/* Servicio(ID_servicio, fecha_del_servicio, numero_de_horas, hora_de_inicio, comision_empresa, ID_solicitud, ID_direccion, ID_trabajador) */
+/* Servicio(fecha_del_servicio, numero_de_horas, hora_de_inicio, comision_empresa, ID_solicitud, ID_direccion, ID_trabajador) */
 INSERT INTO Servicio VALUES('2019-01-05', 5, '10:00:00.000', 30, 1, 1, 1);
 INSERT INTO Servicio VALUES('2019-01-07', 5, '08:00:00.000', 30, 1, 1, 2);
 INSERT INTO Servicio VALUES('2019-01-08', 8, '10:30:00.000', 45, 2, 2, 3);
@@ -570,7 +569,7 @@ INSERT INTO Servicio VALUES('2019-06-16', 7, '10:30:00.000', 35, 99, 2, 3);
 INSERT INTO Servicio VALUES('2019-06-17', 8, '08:30:00.000', 45, 100, 1, 3);
 
 /* Ejemplos de calificaciones */
-/* Calificacion_de_servicio(ID_calificacion, nivel_de_calificacion, comentario, ID_servicio) */
+/* Calificacion_de_servicio(nivel_de_calificacion, comentario, ID_servicio) */
 INSERT INTO Calificacion_de_servicio(nivel_de_calificacion, ID_servicio) VALUES(5, 1);
 INSERT INTO Calificacion_de_servicio(nivel_de_calificacion, ID_servicio) VALUES(4, 2);
 INSERT INTO Calificacion_de_servicio(nivel_de_calificacion, ID_servicio) VALUES(5, 3);
@@ -668,7 +667,7 @@ INSERT INTO Calificacion_de_servicio(nivel_de_calificacion, ID_servicio) VALUES(
 INSERT INTO Calificacion_de_servicio(nivel_de_calificacion, ID_servicio) VALUES(4, 120);
 
 /* Ejemplos de compras */
-/* Compra(ID_compra, fecha_de_compra, ID_proveedor) */
+/* Compra(fecha_de_compra, ID_proveedor) */
 INSERT INTO Compra VALUES ('2019-01-01', 1);
 INSERT INTO Compra VALUES ('2019-01-01', 2);
 INSERT INTO Compra VALUES ('2019-01-01', 3);
@@ -696,7 +695,7 @@ INSERT INTO Compra VALUES ('2019-02-14', 2);
 INSERT INTO Compra VALUES ('2019-03-02', 3);
 
 /* Ejemplos de productos por compra */
-/* Producto_por_compra(ID_producto_por_compra, cantidad, precio_de_venta, ID_producto, ID_compra) */
+/* Producto_por_compra(cantidad, precio_de_venta, ID_producto, ID_compra) */
 INSERT INTO Producto_por_compra VALUES (20, 200, 1, 1);
 INSERT INTO Producto_por_compra VALUES (15, 150, 2, 1);
 INSERT INTO Producto_por_compra VALUES (10, 100, 3, 1);
@@ -799,7 +798,7 @@ INSERT INTO Producto_por_compra VALUES (5, 80, 38, 25);
 INSERT INTO Producto_por_compra VALUES (5, 50, 39, 25);
 
 /* Ejemplos de productos por servicio */
-/* Producto_por_servicio (ID_producto_por_servicio, cantidad, ID_producto, ID_servicio) */
+/* Producto_por_servicio (cantidad, ID_producto, ID_servicio) */
 INSERT INTO Producto_por_servicio VALUES (1, 2, 1);
 INSERT INTO Producto_por_servicio VALUES (1, 30, 1);
 INSERT INTO Producto_por_servicio VALUES (1, 1, 2);
