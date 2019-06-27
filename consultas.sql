@@ -38,7 +38,7 @@ SELECT Proveedor.razon_social AS 'Proveedor', COUNT(*) AS 'Número de compras' F
 SELECT AVG(conteo) AS 'Cantidad de promedio de solicitudes por cliente' FROM (SELECT ID_cliente, COUNT(ID_Solicitud) AS conteo FROM solicitud GROUP BY id_cliente) AS Tabla2;
 
 /* Pago mínimo a un trabajador por un servicio */
-SELECT MIN (pago_a_trabajador) AS 'Pago mínimo a un trabajador por servicio realizado' FROM (SELECT ID_trabjador, pago_a_trabajador FROM Servicio) AS NombreTabla;
+SELECT MIN (pago_a_trabajador) AS 'Pago mínimo a un trabajador por servicio realizado' FROM (SELECT ID_trabajador, pago_a_trabajador FROM Servicio) AS NombreTabla;
 
 /* Cantidad máxima de servicios en un mismo distrito */
 SELECT MAX(Cantidad_de_servicios) AS 'Cantidad máxima de servicios en un mismo distrito' FROM (SELECT distrito.nombre AS Distrito, COUNT(*) AS Cantidad_de_servicios FROM Servicio INNER JOIN Direccion ON Servicio.ID_direccion = Direccion.ID_direccion INNER JOIN Distrito ON Direccion.ID_distrito = Distrito.ID_distrito GROUP BY Distrito.nombre) AS Tabla;
